@@ -4,4 +4,7 @@
     <select id="getAllUserPos" resultType="com.example.demo.model.UserPo">
         SELECT * FROM user;
     </select>
+    <select id="getPasswordByUserName" resultType="String">
+        SELECT password from user where name=#{userName};
+    </select>
 </mapper>

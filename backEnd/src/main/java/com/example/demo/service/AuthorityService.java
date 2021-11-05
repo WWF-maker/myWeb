@@ -14,4 +14,12 @@ public class AuthorityService {
     public List<UserPo> getAllUserInfo(){
         return authorityMapper.getAllUserPos();
     }
+    public String login(UserPo user)
+    {
+        String pwd=authorityMapper.getPasswordByUserName(user.getNickname());
+        if(pwd.equals(user.getPassword()))
+            return "登陆成功";
+        else
+            return "登陆失败,密码错误";
+    }
 }

@@ -8,5 +8,6 @@ import java.util.List;
 
 @Mapper
 public interface AuthorityMapper {
-    public List<UserPo> getAllUserPos();
+    List<UserPo> getAllUserPos();
+    String getPasswordByUserName(String userName);
 }
